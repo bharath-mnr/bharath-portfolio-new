@@ -5,6 +5,7 @@ import Projects from './components/Projects.jsx'
 import Disclaimers from './components/Disclaimers.jsx'
 import Contact from './components/Contact.jsx'
 import AboutStrengths from './components/AboutStrengths.jsx'
+import Footer from './components/Footer.jsx'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <AboutStrengths/>
       <Disclaimers/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }

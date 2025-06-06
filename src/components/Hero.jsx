@@ -1,18 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Hero = () => {
   const heroRef = useRef(null);
   const mousePos = useRef({ x: 0, y: 0 });
-  const [showChat, setShowChat] = useState(false);
-  const [messages, setMessages] = useState([
-    { id: 1, text: "Hey! 👋 You make wonderful websites!", sender: 'user', time: '11:35' },
-    { id: 2, text: "Thank you! 😊", sender: 'bharath', time: '11:35' },
-    { id: 3, text: "Can you make one for me?", sender: 'user', time: '11:36' },
-    { id: 4, text: "Sure! I'd love to help you create something amazing ✨", sender: 'bharath', time: '11:36' },
-    { id: 5, text: "Let's discuss your project!", sender: 'bharath', time: '11:37', isButton: true }
-  ]);
-  const [inputMessage, setInputMessage] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -34,69 +24,6 @@ const Hero = () => {
       return () => hero.removeEventListener('mousemove', handleMouseMove);
     }
   }, []);
-
-  useEffect(() => {
-    // Show chat widget after 2 seconds on all devices (changed from desktop only)
-    const timer = setTimeout(() => {
-      setShowChat(true);
-    }, 2000);
-    
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
-
-  const handleSendMessage = () => {
-    if (inputMessage.trim()) {
-      const newMessage = {
-        id: messages.length + 1,
-        text: inputMessage,
-        sender: 'user',
-        time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false })
-      };
-      
-      setMessages([...messages, newMessage]);
-      
-      // Send message to WhatsApp
-      const whatsappNumber = "917034264195"; // Your WhatsApp number
-      const whatsappMessage = encodeURIComponent(`Hi Bharath! ${inputMessage}`);
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-      
-      // Open WhatsApp in a new tab
-      window.open(whatsappURL, '_blank');
-      
-      setInputMessage('');
-      setIsTyping(true);
-      
-      // Simulate Bharath typing and responding
-      setTimeout(() => {
-        setIsTyping(false);
-        const response = {
-          id: messages.length + 2,
-          text: "Thanks for reaching out! 📱 I've received your message on WhatsApp and will respond there!",
-          sender: 'bharath',
-          time: new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false })
-        };
-        setMessages(prev => [...prev, response]);
-      }, 2000);
-    }
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleSendMessage();
-    }
-  };
-
-  const handleButtonClick = (message) => {
-    if (message.isButton) {
-      // Direct WhatsApp contact for the button click
-      const whatsappNumber = "917034264195";
-      const whatsappMessage = encodeURIComponent("Hi Bharath! I'd like to discuss my project with you!");
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-      window.open(whatsappURL, '_blank');
-    }
-  };
 
   return (
     <div 
@@ -159,90 +86,6 @@ const Hero = () => {
       <div className="absolute top-20 right-20 w-32 h-20 bg-white bg-opacity-5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 animate-bounce"></div>
       <div className="absolute bottom-40 left-10 w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 opacity-20 rounded-full animate-pulse"></div>
       <div className="absolute top-1/3 left-1/4 w-16 h-40 bg-white bg-opacity-5 backdrop-blur-md rounded-full border border-white border-opacity-10 animate-ping"></div>
-
-      {/* WhatsApp-style Chat Widget - Now works on all devices */}
-      {showChat && (
-        <div className="fixed bottom-6 right-4 sm:right-6 z-50 w-80 sm:max-w-sm animate-slideInUp">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            {/* Chat Header */}
-            <div className="bg-green-500 px-4 py-3 flex items-center justify-between">
-              <div className="flex items-center">
-                <div className="w-8 h-8 bg-gray-300 rounded-full mr-3 flex items-center justify-center text-sm font-bold">
-                  B
-                </div>
-                <div>
-                  <div className="text-white font-semibold text-sm">Bharath</div>
-                  <div className="text-green-100 text-xs">Online</div>
-                </div>
-              </div>
-              <button 
-                onClick={() => setShowChat(false)}
-                className="text-white hover:bg-green-600 rounded-full p-1 transition-colors"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            {/* Chat Messages */}
-            <div className="p-4 bg-gray-50 max-h-80 overflow-y-auto">
-              {messages.map((message) => (
-                <div key={message.id} className={`mb-3 ${message.sender === 'bharath' ? 'text-left' : 'text-right'}`}>
-                  <div 
-                    className={`inline-block max-w-xs rounded-lg px-3 py-2 text-sm ${
-                      message.sender === 'bharath' 
-                        ? message.isButton 
-                          ? 'bg-purple-500 text-white cursor-pointer hover:bg-purple-600 transition-colors'
-                          : 'bg-white text-gray-800 shadow-sm'
-                        : 'bg-green-500 text-white'
-                    }`}
-                    onClick={() => handleButtonClick(message)}
-                  >
-                    {message.text}
-                  </div>
-                  <div className={`text-xs text-gray-500 mt-1 ${message.sender === 'bharath' ? 'text-left' : 'text-right'}`}>
-                    {message.time}
-                  </div>
-                </div>
-              ))}
-              
-              {/* Typing indicator */}
-              {isTyping && (
-                <div className="mb-3 text-left">
-                  <div className="inline-block max-w-xs rounded-lg px-3 py-2 text-sm bg-white text-gray-800 shadow-sm">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Chat Input - Fixed functionality */}
-            <div className="p-3 bg-white border-t flex items-center">
-              <input 
-                type="text" 
-                value={inputMessage}
-                onChange={(e) => setInputMessage(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Type a message..." 
-                className="flex-1 px-3 py-2 border rounded-full text-sm focus:outline-none focus:border-green-500"
-              />
-              <button 
-                onClick={handleSendMessage}
-                className="ml-2 bg-green-500 text-white rounded-full p-2 hover:bg-green-600 transition-colors"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col justify-center items-center min-h-screen px-4 text-center">
@@ -425,21 +268,6 @@ const Hero = () => {
           0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
           33% { transform: translate(20px, -20px) rotate(120deg); }
           66% { transform: translate(-20px, 20px) rotate(240deg); }
-        }
-
-        @keyframes slideInUp {
-          from {
-            transform: translateY(100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-
-        .animate-slideInUp {
-          animation: slideInUp 0.5s ease-out;
         }
       `}</style>
     </div>

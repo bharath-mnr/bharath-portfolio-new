@@ -88,27 +88,44 @@ const Contact = () => {
     setIsSubmitting(true);
     setFormStatus({ type: '', message: '' });
 
-    // Simulate form submission
+    // Submit to Formspree
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      setFormStatus({
-        type: 'success',
-        message: 'Thanks for reaching out! I\'ll get back to you soon.'
+      const response = await fetch('https://formspree.io/f/mjkrjjwa', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          inquiryType: formData.inquiryType,
+          company: formData.company,
+          message: formData.message,
+          _subject: `New Contact Form Submission from ${formData.name}`,
+        }),
       });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        inquiryType: '',
-        company: '',
-        message: ''
-      });
+
+      if (response.ok) {
+        setFormStatus({
+          type: 'success',
+          message: 'Thanks for reaching out! I\'ll get back to you soon.'
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          inquiryType: '',
+          company: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       setFormStatus({
         type: 'error',
-        message: 'Something went wrong. Please try again.'
+        message: 'Something went wrong. Please try again or contact me directly.'
       });
     } finally {
       setIsSubmitting(false);

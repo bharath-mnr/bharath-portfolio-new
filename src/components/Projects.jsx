@@ -7,17 +7,18 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
-      title: "Tourism Experience Platform",
-      type: "Major Project",
-      status: "Currently Developing",
-      description: "A comprehensive tourism platform featuring immersive destination showcases, interactive travel planning, and seamless booking experiences.",
-      tech: ["React", "Tailwind CSS", "Custom Animations"],
-      category: "Frontend Only",
-      image: "🏝️",
-      gradient: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-500/20 to-cyan-500/20"
-    },
+    id: 1,
+    title: "LiriLab - Interactive Music Tools",
+    type: "Major Project",
+    status: "Currently Developing",
+    description: "An interactive platform featuring innovative music tools, sound generation capabilities, and creative audio experiences for musicians and enthusiasts.",
+    tech: ["React", "Tailwind CSS", "Tone.js", "Web Audio API", "Java", "Spring Boot"],
+    category: "Full Stack",
+    link: "https://lyrilab.vercel.app/",
+    image: "🎵",
+    gradient: "from-purple-500 to-pink-500",
+    bgGradient: "from-purple-500/20 to-pink-500/20"
+  },  
     {
       id: 2,
       title: "MR Prem Travels",

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Code, Zap, Brain, Github, ExternalLink, CheckCircle, Star, Lightbulb } from 'lucide-react';
+import { Code, Zap, Brain, Github, ExternalLink, CheckCircle, Star, Database, Server, Globe } from 'lucide-react';
 
 const AboutStrengths = () => {
   const sectionRef = useRef(null);
@@ -51,23 +51,23 @@ const AboutStrengths = () => {
   const strengths = [
     {
       icon: Code,
-      title: "Java Mastery",
-      description: "100% proficiency in Java with deep understanding of core concepts and advanced features"
+      title: "Full Stack Development",
+      description: "Strong proficiency in Java, Spring Boot for backend and React for frontend development"
+    },
+    {
+      icon: Database,
+      title: "Database Design",
+      description: "Experience with SQL database design, optimization, and efficient data management"
+    },
+    {
+      icon: Server,
+      title: "Modern Deployment",
+      description: "Skilled in containerization with Docker and cloud deployment using Vercel"
     },
     {
       icon: Brain,
-      title: "Strategic Learning",
-      description: "AI-enhanced learning approach focusing on essential concepts rather than rote memorization"
-    },
-    {
-      icon: Zap,
-      title: "Rapid Development",
-      description: "Built this entire portfolio in just 3-5 hours, showcasing efficient development skills"
-    },
-    {
-      icon: Lightbulb,
-      title: "Smart Focus",
-      description: "Master folder structures and pro techniques to compete at high levels efficiently"
+      title: "Problem Solving",
+      description: "Strong foundation in Data Structures & Algorithms with practical implementation experience"
     }
   ];
 
@@ -130,8 +130,8 @@ const AboutStrengths = () => {
         <div className="text-center mb-16">
           <div className="mb-8">
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-orange-500/20 to-purple-500/20 backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-500">
-              <Star className="w-4 h-4 text-orange-400 mr-3 animate-pulse" />
-              <span className="text-white/90 text-sm font-medium">Core Strengths</span>
+              <Star className="w-4 h-4 text-orange-400 mr-3" />
+              <span className="text-white/90 text-sm font-medium">Technical Expertise</span>
             </div>
           </div>
 
@@ -153,8 +153,8 @@ const AboutStrengths = () => {
           </h2>
 
           <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed">
-            My approach to development is strategic and efficient - focusing on mastering the essentials 
-            while leveraging AI to accelerate learning and problem-solving.
+            Passionate full-stack developer with strong technical foundations and a focus on 
+            building scalable, efficient applications using modern technologies.
           </p>
         </div>
 
@@ -164,51 +164,54 @@ const AboutStrengths = () => {
           <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-white/20 transition-all duration-500">
               <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Brain className="w-8 h-8 text-orange-400 mr-3" />
-                My Learning Philosophy
+                <Code className="w-8 h-8 text-orange-400 mr-3" />
+                My Development Journey
               </h3>
               
               <div className="space-y-6 text-white/80 text-lg leading-relaxed">
                 <p>
-                  I believe in <span className="text-orange-400 font-semibold">strategic mastery</span> over 
-                  memorization. With <span className="text-blue-400 font-semibold">100% proficiency in Java</span> and 
-                  intermediate-level problem-solving skills, I've built a solid foundation that I continuously expand.
+                  I have built a <span className="text-orange-400 font-semibold">strong foundation in Java</span> with 
+                  deep understanding of Object-Oriented Programming principles and core language features. My backend 
+                  expertise extends to <span className="text-blue-400 font-semibold">Spring Boot</span> for creating 
+                  robust REST APIs and scalable applications.
                 </p>
                 
                 <p>
-                  My approach leverages <span className="text-purple-400 font-semibold">AI as a learning accelerator</span> - 
-                  I focus on understanding essential concepts deeply rather than memorizing syntax. This allows me to 
-                  adapt quickly to new technologies and frameworks.
+                  On the frontend, I work with <span className="text-purple-400 font-semibold">React and modern JavaScript</span>, 
+                  creating responsive, interactive user interfaces. I'm proficient with 
+                  <span className="text-green-400 font-semibold"> Tailwind CSS</span> for efficient styling and 
+                  follow best practices for component architecture and state management.
                 </p>
                 
                 <p>
-                  For example, in React, I master <span className="text-green-400 font-semibold">folder structures 
-                  and professional development techniques</span> that enable me to compete at advanced levels efficiently. 
-                  Quality over quantity is my mantra.
+                  My technical skills include <span className="text-cyan-400 font-semibold">database design with SQL</span>, 
+                  containerization using <span className="text-orange-400 font-semibold">Docker</span>, and deployment 
+                  strategies with modern platforms like Vercel. I have a solid understanding of 
+                  <span className="text-purple-400 font-semibold"> Data Structures and Algorithms</span>, which helps 
+                  me write efficient, optimized code.
                 </p>
                 
                 <p>
-                  <span className="text-cyan-400 font-semibold">Learning new technologies is natural to me</span> - 
-                  I can easily catch up with any technology when needed. The current job market is challenging, 
-                  and like many developers, I've experienced confusion about which technologies to master beyond 
-                  my solid foundation in <span className="text-orange-400 font-semibold">Java, OOP, and DSA</span>.
+                  I'm committed to <span className="text-blue-400 font-semibold">continuous learning</span> and staying 
+                  current with industry trends. Whether working on backend architecture, frontend interfaces, or 
+                  full-stack projects, I focus on delivering clean, maintainable code and effective solutions.
                 </p>
                 
                 <p>
-                  However, I'm confident that <span className="text-purple-400 font-semibold">given the right opportunity, 
-                  I will learn super fast</span> and adapt to any tech stack or project requirements. 
-                  My learning methodology ensures rapid skill acquisition when focused on real-world applications.
+                  <span className="text-green-400 font-semibold">I'm eager to contribute</span> to challenging projects 
+                  and grow within a collaborative team environment. My goal is to leverage my technical skills to 
+                  build impactful applications that solve real-world problems.
                 </p>
               </div>
               
               <div className="mt-8 p-6 bg-gradient-to-r from-orange-500/10 to-purple-500/10 rounded-2xl border border-orange-500/20">
                 <div className="flex items-center mb-4">
-                  <Zap className="w-6 h-6 text-orange-400 mr-3" />
-                  <span className="text-white font-semibold text-lg">Speed & Efficiency</span>
+                  <Globe className="w-6 h-6 text-orange-400 mr-3" />
+                  <span className="text-white font-semibold text-lg">Full Stack Capabilities</span>
                 </div>
                 <p className="text-white/80">
-                  This entire portfolio was built in just <span className="text-orange-400 font-bold">3-5 hours</span>, 
-                  demonstrating my ability to deliver high-quality results rapidly through strategic development practices.
+                  Experienced in <span className="text-orange-400 font-bold">end-to-end development</span> - 
+                  from database design and backend APIs to responsive frontend interfaces and deployment strategies.
                 </p>
               </div>
             </div>
@@ -225,7 +228,7 @@ const AboutStrengths = () => {
                   </div>
                   <div>
                     <div className="text-white font-semibold text-lg">Portfolio Repository</div>
-                    <div className="text-white/60 text-sm">See the complete codebase and development process</div>
+                    <div className="text-white/60 text-sm">Explore my code and development approach</div>
                   </div>
                 </div>
                 <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-white transition-colors duration-300" />
@@ -265,9 +268,9 @@ const AboutStrengths = () => {
             
             {/* Additional Highlight */}
             <div className="bg-gradient-to-r from-orange-500/10 to-purple-500/10 backdrop-blur-md rounded-2xl p-6 border border-orange-500/20 text-center">
-              <div className="text-2xl font-bold text-white mb-2">Strategic Developer</div>
+              <div className="text-2xl font-bold text-white mb-2">Ready to Contribute</div>
               <div className="text-white/70">
-                Efficiency through intelligent learning and AI-enhanced development
+                Seeking opportunities to apply my skills in challenging projects
               </div>
             </div>
           </div>

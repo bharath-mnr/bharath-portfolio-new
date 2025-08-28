@@ -83,9 +83,7 @@ const Hero = () => {
       </div>
 
       {/* Glassmorphism Cards */}
-      <div className="absolute top-20 right-20 w-32 h-20 bg-white bg-opacity-5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 animate-bounce"></div>
       <div className="absolute bottom-40 left-10 w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 opacity-20 rounded-full animate-pulse"></div>
-      <div className="absolute top-1/3 left-1/4 w-16 h-40 bg-white bg-opacity-5 backdrop-blur-md rounded-full border border-white border-opacity-10 animate-ping"></div>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col justify-center items-center min-h-screen px-4 text-center">
@@ -163,24 +161,14 @@ const Hero = () => {
           <p className="text-xl md:text-2xl lg:text-3xl text-white/80 mb-4 font-light">
             Creative Developer & Digital Architect
           </p>
-          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">
-            Transforming ideas into immersive digital experiences through innovative code, 
-            stunning design, and cutting-edge technology.
+           <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-xs sm:max-w-2xl mx-auto leading-relaxed">
+            Building scalable web applications with Java, Spring Boot, React, and modern technologies. 
+            Experienced in DSA, OOP, SQL, Docker, and cloud deployment with Vercel.
           </p>
         </div>
 
         {/* Interactive CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 mb-16">
-          <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
-            <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <span className="relative z-10 flex items-center">
-              Explore My Universe
-              <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </span>
-          </button>
-          
+        <div className="flex justify-center mb-12 sm:mb-16">
           <button 
             onClick={() => {
               const whatsappNumber = "917034264195";
@@ -188,11 +176,11 @@ const Hero = () => {
               const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
               window.open(whatsappURL, '_blank');
             }}
-            className="group px-8 py-4 border-2 border-white/30 rounded-full font-semibold text-white backdrop-blur-sm hover:border-white/60 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+            className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 rounded-full font-semibold text-white backdrop-blur-sm hover:border-white/60 hover:bg-white/10 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
           >
             <span className="flex items-center">
               Let's Connect
-              <div className="ml-2 w-5 h-5 group-hover:rotate-45 transition-transform duration-300">
+              <div className="ml-2 w-4 sm:w-5 h-4 sm:h-5 group-hover:rotate-45 transition-transform duration-300">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>

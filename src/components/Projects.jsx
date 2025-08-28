@@ -284,14 +284,13 @@ const Projects = () => {
           {/* AI Disclaimer */}
           <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-md rounded-2xl border border-white/10 p-8">
             <div className="flex items-center mb-4">
-              <div className="text-2xl mr-3">🤖</div>
-              <h3 className="text-xl font-bold text-white">AI-Powered Development</h3>
+              <div className="text-2xl mr-3">🎯</div>
+              <h3 className="text-xl font-bold text-white">Technical Expertise</h3>
             </div>
             <p className="text-white/70 leading-relaxed">
-              <strong className="text-white/90">Transparency First:</strong> I leverage AI tools extensively in my development process. 
-              Rather than seeing this as a limitation, I view it as a superpower. I know how to effectively collaborate with AI 
-              to accelerate development, solve complex problems, and deliver high-quality solutions faster. 
-              The key is knowing how to direct AI, validate outputs, and integrate them seamlessly into robust applications.
+              <strong className="text-white/90">Problem Solver:</strong> I excel at breaking down complex 
+                challenges, researching solutions, and implementing robust applications. My strength lies in 
+                understanding requirements, architecting solutions, and delivering reliable software.
             </p>
           </div>
         </div>

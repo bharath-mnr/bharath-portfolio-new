@@ -281,27 +281,6 @@ const Projects = () => {
             </p>
           </div>
         </div>
-
-        {/* Contact CTA */}
-        <div className="text-center mt-16">
-          <button 
-            onClick={() => {
-              const whatsappNumber = "917034264195";
-              const whatsappMessage = encodeURIComponent("Hi Bharath! I'd like to discuss a project with you!");
-              const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-              window.open(whatsappURL, '_blank');
-            }}
-            className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <span className="relative z-10 flex items-center">
-              Let's Build Something Amazing
-              <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </span>
-          </button>
-        </div>
       </div>
 
       <style jsx>{`

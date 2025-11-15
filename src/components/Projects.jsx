@@ -7,43 +7,30 @@ const Projects = () => {
 
   const projects = [
     {
-    id: 1,
-    title: "LiriLab - Interactive Music Tools",
-    type: "Major Project",
-    status: "Currently Developing",
-    description: "An interactive platform featuring innovative music tools, sound generation capabilities, and creative audio experiences for musicians and enthusiasts.",
-    tech: ["React", "Tailwind CSS", "Tone.js", "Web Audio API", "Java", "Spring Boot"],
-    category: "Full Stack",
-    link: "https://lyrilab.vercel.app/",
-    image: "🎵",
-    gradient: "from-purple-500 to-pink-500",
-    bgGradient: "from-purple-500/20 to-pink-500/20"
-  },  
-    {
-      id: 2,
-      title: "MR Prem Travels",
-      type: "Small Project",
+      id: 1,
+      title: "MIDI Generator Platform",
+      type: "Major Project",
       status: "Live",
-      description: "Modern taxi booking platform with real-time availability, route optimization, and user-friendly booking interface.",
-      tech: ["React", "Tailwind CSS", "Responsive Design"],
-      category: "Frontend Only",
-      link: "https://www.mrpremtravels.com/",
-      image: "🚕",
-      gradient: "from-purple-500 to-pink-500",
-      bgGradient: "from-purple-500/20 to-pink-500/20"
+      description: "Full-stack web application that transforms natural language descriptions into structured MIDI sequences using custom parsing algorithms and AI integration.",
+      tech: ["React", "Spring Boot", "PostgreSQL", "RESTful APIs", "Gemini API", "Vite"],
+      category: "Full Stack",
+      link: "https://midi-generator-seven.vercel.app/",
+      image: "🎹",
+      gradient: "from-blue-500 to-cyan-500",
+      bgGradient: "from-blue-500/20 to-cyan-500/20"
     },
     {
-      id: 3,
-      title: "Team AJ",
-      type: "Portfolio Project",
-      status: "Coming Soon",
-      description: "Professional service display platform highlighting personal brand, skills, and service offerings with modern UI/UX.",
-      tech: ["React", "Tailwind CSS", "Interactive Components"],
-      category: "Frontend Only",
-      link: "Link Coming Soon",
-      image: "💼",
-      gradient: "from-green-500 to-emerald-500",
-      bgGradient: "from-green-500/20 to-emerald-500/20"
+      id: 2,
+      title: "LiriLab - Interactive Music Tools",
+      type: "Major Project",
+      status: "Live",
+      description: "Interactive browser-based music learning platform featuring real-time audio processing, music theory lessons, and ear training exercises.",
+      tech: ["React", "Tailwind CSS", "Tone.js", "Web Audio API"],
+      category: "Frontend",
+      link: "https://lyrilab.com/",
+      image: "🎵",
+      gradient: "from-purple-500 to-pink-500",
+      bgGradient: "from-purple-500/20 to-pink-500/20"
     }
   ];
 

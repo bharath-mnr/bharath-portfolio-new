@@ -565,17 +565,12 @@ export default function App() {
                 {/* Glow */}
                 <div className="absolute inset-4 rounded-full bg-violet-600/20 blur-2xl" />
                 {/* Photo container */}
-                <div className="absolute inset-6 rounded-full overflow-hidden border-2 border-violet-500/30 shadow-2xl shadow-violet-600/20">
-                  {/* ← Replace this div's content with your photo */}
-                  <div className="w-full h-full bg-gradient-to-br from-[#1a0a2e] to-[#0a0a20] flex flex-col items-center justify-center gap-3">
-                    <div className="text-5xl">👤</div>
-                    <div className="text-zinc-600 text-[10px] font-mono text-center px-4"></div>
-                  </div>
-                  {/* <img
-                    src="public/img.jpg"
+                <div className="absolute inset-6 rounded-full overflow-hidden ...">
+                  <img
+                    src="public/img2.jpeg"
                     alt="Bharath"
                     className="w-full h-full object-cover"
-                    /> */}
+                  />
                 </div>
               </div>
 
@@ -878,7 +873,7 @@ export default function App() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent" />
         <Orb className="w-[400px] h-[400px] bg-violet-700/15 bottom-0 left-1/2 -translate-x-1/2" />
         <div className="max-w-4xl mx-auto relative z-10">
-          <SectionHdr eyebrow="Contact" title="Let's Work Together" sub="Open to full-stack and backend engineering roles. Remote or relocate." />
+          <SectionHdr eyebrow="Contact" title="Let's Work Together"/>
 
           <div className="grid sm:grid-cols-2 gap-4 mb-8">
             {[
@@ -906,7 +901,7 @@ export default function App() {
               <span className="text-2xl">📍</span>
               <div>
                 <div className="text-zinc-500 text-xs">Based in</div>
-                <div className="text-white font-semibold text-sm">Munnar, Kerala, India</div>
+                <div className="text-white font-semibold text-sm">BTM,  Bangalore</div>
               </div>
               <div className="w-px h-8 bg-white/10 mx-1" />
               <div>

@@ -15,7 +15,6 @@ const App = () => {
       <Skills/>
       <Projects/>
       <AboutStrengths/>
-     
       <Contact/>
       <Footer/> */}
       <ParticleCanvas/>

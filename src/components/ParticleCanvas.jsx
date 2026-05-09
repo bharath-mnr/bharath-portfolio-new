@@ -567,7 +567,7 @@ export default function App() {
                 {/* Photo container */}
                 <div className="absolute inset-6 rounded-full overflow-hidden ...">
                   <img
-                    src="/img2.jpeg"
+                    src="/img3.jpg"
                     alt="Bharath"
                     className="w-full h-full object-cover"
                   />

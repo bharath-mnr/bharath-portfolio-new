@@ -575,17 +575,17 @@ export default function App() {
               </div>
 
               {/* Floating pills */}
-              <div className="absolute -left-10 top-1/4 bg-black/80 border border-amber-500/30 rounded-2xl px-4 py-3 backdrop-blur-xl shadow-2xl">
-                <div className="text-amber-300 font-bold text-sm">🎹 MIDI AI</div>
-                <div className="text-zinc-500 text-xs">Custom Parser Built</div>
+              <div className="absolute -left-4 sm:-left-10 top-1/4 bg-black/80 border border-amber-500/30 rounded-2xl px-2 sm:px-4 py-2 sm:py-3 backdrop-blur-xl shadow-2xl z-10">
+                <div className="text-amber-300 font-bold text-xs sm:text-sm">🎹 MIDI AI</div>
+                <div className="text-zinc-500 text-[10px] sm:text-xs">Custom Parser Built</div>
               </div>
-              <div className="absolute -right-8 top-1/3 bg-black/80 border border-violet-500/30 rounded-2xl px-4 py-3 backdrop-blur-xl shadow-2xl">
-                <div className="text-violet-300 font-bold text-sm">☕ Spring Boot</div>
-                <div className="text-zinc-500 text-xs">Backend Expert</div>
+              <div className="absolute -right-4 sm:-right-8 top-1/3 bg-black/80 border border-violet-500/30 rounded-2xl px-2 sm:px-4 py-2 sm:py-3 backdrop-blur-xl shadow-2xl z-10">
+                <div className="text-violet-300 font-bold text-xs sm:text-sm">☕ Spring Boot</div>
+                <div className="text-zinc-500 text-[10px] sm:text-xs">Backend Expert</div>
               </div>
-              <div className="absolute left-1/4 -bottom-6 bg-black/80 border border-emerald-500/30 rounded-2xl px-4 py-3 backdrop-blur-xl shadow-2xl">
-                <div className="text-emerald-300 font-bold text-sm">🧠 RAG Pipeline</div>
-                <div className="text-zinc-500 text-xs">Pinecone + Gemini</div>
+              <div className="absolute left-1/4 -bottom-4 sm:-bottom-6 bg-black/80 border border-emerald-500/30 rounded-2xl px-2 sm:px-4 py-2 sm:py-3 backdrop-blur-xl shadow-2xl z-10">
+                <div className="text-emerald-300 font-bold text-xs sm:text-sm">🧠 RAG Pipeline</div>
+                <div className="text-zinc-500 text-[10px] sm:text-xs">Turso + Gemini</div>
               </div>
             </div>
           </div>
